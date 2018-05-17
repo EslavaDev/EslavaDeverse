@@ -7,11 +7,14 @@
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "author": "EslavaDev",
   "license": "MIT",
-  
   "devDependencies": {
     "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "mariasql": "^0.2.6",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.7"
   }
 }
