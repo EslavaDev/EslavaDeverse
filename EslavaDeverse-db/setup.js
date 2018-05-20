@@ -8,6 +8,9 @@ const Sequelize = require('sequelize')
 const prompt = inquirer.createPromptModule()
 
 async function setup () {
+  let flag=false
+  process.argv.map(m => (m === '--yes' || m === '--y')? flag=true: flag=false)
+  if(!flag){
   const answer = await prompt([
     {
       type: 'confirm',
@@ -19,6 +22,7 @@ async function setup () {
   if (!answer.setup) {
     return console.log('Nothing happened :)')
   }
+}
   const config = {
     database: process.env.DB_NAME || 'eslavadeverse',
     username: process.env.DB_USER || 'wolfy',
