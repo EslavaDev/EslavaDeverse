@@ -49,4 +49,4 @@ module.exports = async (config) => {
   }
 }
 
-module.exports.configG = () => configG 
+module.exports.configG = () => configG
