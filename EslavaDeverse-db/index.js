@@ -6,6 +6,7 @@ const setupMetricModel = require('./models/metric')
 const setupAgent = require('./lib/agent')
 const setupMetric = require('./lib/metric')
 const defaults = require('defaults')
+const configG = require('./config-db')()
 
 module.exports = async (config) => {
   config = defaults(config, {
@@ -47,3 +48,5 @@ module.exports = async (config) => {
     Metric
   }
 }
+
+module.exports.configG = () => configG 
